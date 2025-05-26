@@ -26,6 +26,7 @@ Local businesses often struggle to retain loyal customers due to:
 ## 🚀 Features
 
 ### ✅ For Customers:
+
 - Check-in automatically via **WiFi login**, **QR scan**, or **NFC tap**
 - Earn loyalty points and streak bonuses
 - Enjoy gamified rewards (Spin-the-Wheel, Leaderboard)
@@ -33,6 +34,7 @@ Local businesses often struggle to retain loyal customers due to:
 - View reward progress, invite friends, and redeem offers
 
 ### 🧑‍💼 For Business Owners:
+
 - Create and manage a loyalty program
 - View real-time check-ins and customer data
 - Export analytics (CSV/JSON)

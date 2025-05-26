@@ -97,8 +97,8 @@ export default function BusinessDashboardScreen() {
                 </Card>
 
                 {/* Stats Overview */}
-                <Text style={styles.sectionTitle}>Today's Overview</Text>
-                <View style={styles.statsGrid}>
+                {/* <Text style={styles.sectionTitle}>Today's Overview</Text> */}
+                {/* <View style={styles.statsGrid}>
                     <StatCard
                         title="Today's Check-ins"
                         value={todayCheckIns}
@@ -129,7 +129,7 @@ export default function BusinessDashboardScreen() {
                         icon={<Clock size={24} color={colors.accent} />}
                         color={colors.accent}
                     />
-                </View>
+                </View> */}
 
                 {/* Check-in Methods */}
                 <Text style={styles.sectionTitle}>Check-in Methods</Text>

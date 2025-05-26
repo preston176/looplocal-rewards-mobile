@@ -28,6 +28,7 @@
 - [Localization & Extensibility](#-localization--extensibility)
 - [Future Enhancements](#-future-enhancements)
 - [Highlight Reel](#highlight-reel)
+- [Pitch Deck](#-pitch-deck)
 - [Conclusion](#-conclusion)
 - [Contact](#-contact)
 - [Back to Top ⏫](#top)
@@ -255,6 +256,21 @@ bun start
 > LoopLocal is a scalable, offline-first platform that brings modern loyalty systems to underserved local businesses. It mimics big-tech ecosystems (Apple Pay check-ins, Google WiFi captive portals), yet functions **without dependency on full-time internet** or expensive infrastructure. All while giving users **fun, gamified experiences** they already love.
 
 ---
+
+## 📊 Pitch Deck
+
+Want an at-a-glance overview of LoopLocal?  
+Check out our interactive pitch deck:
+
+[![LoopLocal Pitch Deck](https://img.shields.io/badge/View%20Pitch%20Deck-Canva-%2300C4CC?logo=canva&logoColor=white&style=for-the-badge)](https://www.canva.com/design/DAGokuiDMXg/1vN4fKRC7XRSbzUZOj3c9w/view?utm_content=DAGokuiDMXg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb6db3c59f5)
+
+Or view it here:  
+🔗 [LoopLocal Pitch Deck on Canva](https://www.canva.com/design/DAGokuiDMXg/1vN4fKRC7XRSbzUZOj3c9w/view?utm_content=DAGokuiDMXg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb6db3c59f5)
+
+<!--
+For external documentation sites (NOT on GitHub), you can embed the deck like this:
+<iframe src="https://www.canva.com/design/DAGokuiDMXg/1vN4fKRC7XRSbzUZOj3c9w/view?embed" width="800" height="450" allowfullscreen style="border:none;"></iframe>
+-->
 
 ## 🏁 Conclusion
 

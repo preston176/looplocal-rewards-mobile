@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "app.rork.looplocal-loyalty-app"
+      "package": "com.preston176.looplocalloyaltyapp"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
@@ -38,6 +38,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": "https://rork.com/"
+      },
+      "eas": {
+        "projectId": "8b142e6f-a8db-4c11-899a-0c5fad437bd8"
+      }
     }
   }
 }

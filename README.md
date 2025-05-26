@@ -2,8 +2,10 @@
 
 [![Mobile Friendly](https://img.shields.io/badge/Mobile%20Friendly-Yes-27ae60?style=flat-square&logo=android)](https://github.com/preston176/looplocal-rewards-mobile)
 [![PWA](https://img.shields.io/badge/Progressive%20Web%20App-PWA-blueviolet?logo=pwa&style=flat-square)](https://github.com/preston176/looplocal-rewards-mobile)
+
 <!-- [![License](https://img.shields.io/github/license/preston176/looplocal-rewards-mobile?style=flat-square)](https://github.com/preston176/looplocal-rewards-mobile/blob/main/LICENSE)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/preston176/looplocal-rewards-mobile/main.yml?style=flat-square)](https://github.com/preston176/looplocal-rewards-mobile/actions) -->
+
 [![Last Commit](https://img.shields.io/github/last-commit/preston176/looplocal-rewards-mobile?style=flat-square)](https://github.com/preston176/looplocal-rewards-mobile/commits)
 
 > A mobile-first, progressive web app (PWA) that empowers salons, barbershops, and eateries with a smart, **offline-friendly** loyalty rewards system — no app installs needed.
@@ -115,17 +117,29 @@ flowchart LR
 ```
 
 ---
+
 ## 🧱 App Architecture
 
 ```mermaid
-graph TD
-    A[Customer Device] -->|Connects to WiFi| B[Captive Portal / PWA]
-    B --> C[Local DB (IndexedDB)]
-    C --> D[Sync Engine]
-    D -->|When online| E[Cloud API]
-    B --> F[Gamified UI]
-    E --> G[Admin Dashboard]
-    G --> H[Business Analytics & Exports]
+flowchart TD
+    subgraph Customer_Device [Customer Device]
+        A1["User Interface\n(PWA on Mobile/Web)"]
+        A2["Local Database\n(IndexedDB/Dexie)"]
+        A3["Offline Sync Engine"]
+        A4["Gamified UI"]
+    end
+    subgraph Cloud_Backend [Cloud & Backend]
+        B1["Cloud API\n(Express.js/SQLite)"]
+        B2["Admin Dashboard"]
+        B3["Analytics & Reports"]
+    end
+
+    A1 --> A2
+    A2 --> A3
+    A3 -- "When Online" --> B1
+    A1 --> A4
+    B1 --> B2
+    B2 --> B3
 ```
 
 ---
@@ -163,26 +177,26 @@ graph TD
 
 ## 🧪 Testing Scenarios
 
-| Test Case                        | Expected Result                                       |
-|----------------------------------|-------------------------------------------------------|
-| Offline QR check-in              | Check-in cached and synced later                      |
-| Multiple check-ins in a day      | Only 1 rewarded per 24h per venue                     |
-| Referral link reuse              | Only unique phone numbers rewarded                    |
-| Owner logs in with wrong phone   | Access denied with retry notice                      |
-| Data export                      | File is downloadable, correct data in table format    |
+| Test Case                      | Expected Result                                    |
+| ------------------------------ | -------------------------------------------------- |
+| Offline QR check-in            | Check-in cached and synced later                   |
+| Multiple check-ins in a day    | Only 1 rewarded per 24h per venue                  |
+| Referral link reuse            | Only unique phone numbers rewarded                 |
+| Owner logs in with wrong phone | Access denied with retry notice                    |
+| Data export                    | File is downloadable, correct data in table format |
 
 ---
 
 ## 🔧 Tech Stack
 
-| Layer             | Tech                                                                 |
-|------------------|----------------------------------------------------------------------|
-| Frontend         | PWA (React/Next.js or similar), Tailwind CSS                         |
-| Offline Storage  | IndexedDB (via Dexie.js or localStorage fallback)                    |
-| Backend (Edge)   | Express.js / SQLite (or local Node.js server on device)              |
-| Captive Portal   | Simulated via router route or real via router login page             |
-| Notifications    | Twilio / Africa’s Talking / Firebase (simulated in prototype)        |
-| QR/NFC Sim       | HTML-based simulation buttons for tap/scan interaction               |
+| Layer           | Tech                                                          |
+| --------------- | ------------------------------------------------------------- |
+| Frontend        | PWA (React/Next.js or similar), Tailwind CSS                  |
+| Offline Storage | IndexedDB (via Dexie.js or localStorage fallback)             |
+| Backend (Edge)  | Express.js / SQLite (or local Node.js server on device)       |
+| Captive Portal  | Simulated via router route or real via router login page      |
+| Notifications   | Twilio / Africa’s Talking / Firebase (simulated in prototype) |
+| QR/NFC Sim      | HTML-based simulation buttons for tap/scan interaction        |
 
 ---
 
@@ -198,6 +212,7 @@ npm start
 ```
 
 ### Using Bun (Recommended for performance)
+
 ```bash
 bun install
 bun start
@@ -210,10 +225,9 @@ bun start
 
 ## 🎨 Screenshots
 
-| Customer Home | Owner Dashboard |
-|---------------|----------------|
+| Customer Home                                     | Owner Dashboard                                   |
+| ------------------------------------------------- | ------------------------------------------------- |
 | ![Customer](assets\images\demo\customer-home.jpg) | ![Owner](assets\images\demo\business-setting.jpg) |
-
 
 ---
 

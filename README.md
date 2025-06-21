@@ -24,7 +24,6 @@
 - [Testing Scenarios](#-testing-scenarios)
 - [Tech Stack](#-tech-stack)
 - [Development Setup](#-dev-setup-optional)
-- [Screenshots](#-screenshots)
 - [Localization & Extensibility](#-localization--extensibility)
 - [Future Enhancements](#-future-enhancements)
 - [Highlight Reel](#highlight-reel)
@@ -221,14 +220,6 @@ bun start
 
 - To simulate offline: disable browser network in DevTools
 - To test PWA: install on mobile home screen or use Lighthouse
-
----
-
-## 🎨 Screenshots
-
-| Customer Home                                     | Owner Dashboard                                   |
-| ------------------------------------------------- | ------------------------------------------------- |
-| ![Customer](assets\images\demo\customer-home.jpg) | ![Owner](assets\images\demo\business-setting.jpg) |
 
 ---
 
